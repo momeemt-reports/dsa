@@ -1,5 +1,19 @@
 name: CI
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - '**/*.c'
+      - '**/*.h'
+      - '.github/workflows/*'
+      - 'Makefile'
+      - '**/*.nix'
+  pull_request:
+    paths:
+      - '**/*.c'
+      - '**/*.h'
+      - '.github/workflows/*'
+      - 'Makefile'
+      - '**/*.nix'
 
 jobs:
   test:

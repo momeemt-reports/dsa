@@ -3,6 +3,13 @@ on:
   push:
     branches:
       - main
+    paths:
+      - '**/*.c'
+      - '**/*.h'
+      - '.github/workflows/*'
+      - 'Makefile'
+      - '**/*.nix'
+      - 'Doxyfile'
 
 permissions:
   contents: write
