@@ -30,6 +30,9 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADERS)
 	mkdir -p $(@D)
 	$(CC) $(CFLAGS) -c $< -o $@
 
+generate_documentation:
+	doxygen Doxyfile
+
 clean:
 	rm -f $(OBJS)
 	rm -f $(TEST_EXES)
