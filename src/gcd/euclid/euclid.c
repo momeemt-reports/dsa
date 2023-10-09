@@ -1,4 +1,4 @@
-#include "gcd/euclid/euclid.h"
+#include "gcd.h"
 
 int gcd_euclid(int n, int m) {
     while (n != m) {

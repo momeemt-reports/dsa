@@ -2,6 +2,7 @@
     "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix",
     "files.associations": {
         "testdb.h": "c",
-        "euclid.h": "c"
+        "euclid.h": "c",
+        "basic.h": "c"
     }
 }
