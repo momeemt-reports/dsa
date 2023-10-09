@@ -36,5 +36,6 @@ generate_documentation:
 clean:
 	rm -f $(OBJS)
 	rm -f $(TEST_EXES)
+	rm -rf result
 
 .DEFAULT_GOAL := test
