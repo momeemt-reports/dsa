@@ -13,7 +13,6 @@ bool binary_search(int *array, int size, int value) {
             low = mid + 1;
         }
     }
-    printf("ans: %d\n", array[low]);
     if (array[low] == value) {
         return true;
     }

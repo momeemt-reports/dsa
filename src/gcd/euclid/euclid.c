@@ -7,7 +7,6 @@ int gcd_euclid(int n, int m) {
         int r = n % m;
         n = m;
         m = r;
-        printf("n: %d, m: %d, r: %d\n", n, m, r);
     }
     return n;
 }
