@@ -18,9 +18,6 @@ TEST_FILES := $(wildcard $(TEST_DIR)/*.c)
 TEST_EXES := $(patsubst $(TEST_DIR)/%.c,$(TEST_BIN_DIR)/%_out,$(TEST_FILES))
 RESULT_EXES := $(patsubst $(TEST_DIR)/%.c,$(RESULT_BIN_DIR)/%_out,$(TEST_FILES))
 
-test_run:
-	$(foreach test,$(RESULT_EXES),$(test);)
-
 test: $(TEST_EXES)
 
 $(TEST_BIN_DIR)/%_out: $(TEST_DIR)/%.c $(OBJS)
@@ -37,5 +34,6 @@ clean:
 	rm -f $(OBJS)
 	rm -f $(TEST_EXES)
 	rm -rf result
+	rm -rf html
 
 .DEFAULT_GOAL := test
