@@ -37,5 +37,6 @@ clean:
 	rm -f $(OBJS)
 	rm -f $(TEST_EXES)
 	rm -rf result
+	rm -rf html
 
 .DEFAULT_GOAL := test
