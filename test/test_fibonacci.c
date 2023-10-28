@@ -33,20 +33,20 @@ int main(void) {
 void fibonacci_recursive_test_1(void) {
     called_fibonacci = 0;
     int result = fibonacci_recursive(3);
-    CU_ASSERT_EQUAL(1, result);
+    CU_ASSERT_EQUAL(2, result);
     return;
 }
 
 void fibonacci_recursive_test_2(void) {
     called_fibonacci = 0;
     int result = fibonacci_recursive(4);
-    CU_ASSERT_EQUAL(1, result);
+    CU_ASSERT_EQUAL(3, result);
     return;
 }
 
 void fibonacci_recursive_test_3(void) {
     called_fibonacci = 0;
     int result = fibonacci_recursive(5);
-    CU_ASSERT_EQUAL(1, result);
+    CU_ASSERT_EQUAL(5, result);
     return;
 }

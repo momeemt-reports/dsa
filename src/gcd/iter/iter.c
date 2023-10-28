@@ -12,7 +12,6 @@ int gcd_iter(int n, int m) {
             gcd = i;
         }
         i++;
-        printf("n: %d, m: %d, i: %d, gcd: %d\n", n, m, i, gcd);
     }
     return gcd;
 }
