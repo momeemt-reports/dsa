@@ -23,3 +23,17 @@ jobs:
       - uses: cachix/install-nix-action@v22
       - run: nix-build
       - run: make test_run
+  clang-format:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v22
+      - run: nix-env -f ../nix/pkgs.nix -iA llvmPackages_16.clang-unwrapped
+      - run: clang-format --dry-run --Werror **/*.(c|h)
+  clang-tidy:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: cachix/install-nix-action@v22
+      - run: nix-env -f ../nix/pkgs.nix -iA llvmPackages_16.clang-unwrapped
+      - run: clang-tidy --checks **/*.(c|h)
