@@ -2,8 +2,8 @@
 #define __LINKED_LIST_H__
 
 typedef struct cell {
-    int data;
-    struct cell *next;
+  int data;
+  struct cell *next;
 } Cell;
 
 extern Cell *head;
