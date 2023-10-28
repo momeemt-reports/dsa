@@ -1,7 +1,8 @@
 { pkgs ? import ./nix/pkgs.nix }:
 pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
-    gcc
+    llvmPackages_16.libcxxClang
+    llvmPackages_16.clang-unwrapped
     gnumake
     cunit
   ];

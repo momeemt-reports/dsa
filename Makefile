@@ -1,4 +1,4 @@
-CC := gcc
+CC := clang
 
 SRC_DIR := ./src
 OBJ_DIR := ./obj
