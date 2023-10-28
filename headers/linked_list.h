@@ -2,8 +2,8 @@
 #define __LINKED_LIST_H__
 
 typedef struct cell {
-  int data;
-  struct cell *next;
+    int data;
+    struct cell *next;
 } Cell;
 
 extern Cell *head;
@@ -14,4 +14,4 @@ void delete_cell(Cell *p);
 void delete_cell_top(void);
 void display(void);
 
-#endif // __LINKED_LIST_H__
+#endif  // __LINKED_LIST_H__

@@ -5,4 +5,4 @@ int gcd_iter(int n, int m);
 int gcd_euclid(int n, int m);
 int gcd_recursive(int n, int m);
 
-#endif // __GCD_H__
+#endif  // __GCD_H__

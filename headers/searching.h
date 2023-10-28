@@ -7,4 +7,4 @@
 
 bool binary_search(int *arr, int size, int key);
 
-#endif // __SEARCHING_H__
+#endif  // __SEARCHING_H__
