@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.6"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>dsa: src/gcd/euclid/euclid.c ファイル</title>
+<title>dsa: cell 構造体</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -67,84 +67,56 @@ $(function() {
 </div>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_e73d07096f34be633ac40a36fe10cf3f.html">gcd</a></li><li class="navelem"><a class="el" href="dir_1ae017c218dfd73f37e59d8e67af3bad.html">euclid</a></li>  </ul>
-</div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#func-members">関数</a>  </div>
-  <div class="headertitle"><div class="title">euclid.c ファイル</div></div>
+<a href="#pub-attribs">公開変数類</a> &#124;
+<a href="structcell-members.html">全メンバ一覧</a>  </div>
+  <div class="headertitle"><div class="title">cell 構造体</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="gcd_8h_source.html">gcd.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
-</div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
-関数</h2></td></tr>
-<tr class="memitem:ad2f793d1118692684ebf3f309c8695b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="euclid_8c.html#ad2f793d1118692684ebf3f309c8695b4">gcd_euclid</a> (int n, int m)</td></tr>
-<tr class="separator:ad2f793d1118692684ebf3f309c8695b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a768ee7f51e9677ad1fdadbb3d97f0439"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="euclid_8c.html#a768ee7f51e9677ad1fdadbb3d97f0439">gcd_recursive</a> (int n, int m)</td></tr>
-<tr class="separator:a768ee7f51e9677ad1fdadbb3d97f0439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+
+<p><code>#include &lt;<a class="el" href="linked__list_8h_source.html">linked_list.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+公開変数類</h2></td></tr>
+<tr class="memitem:a6afef9b4ebeade42cf4f2c7f821a05a8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcell.html#a6afef9b4ebeade42cf4f2c7f821a05a8">data</a></td></tr>
+<tr class="separator:a6afef9b4ebeade42cf4f2c7f821a05a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f9c7a2efcdc3d026190df2056c614f3"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structcell.html">cell</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcell.html#a2f9c7a2efcdc3d026190df2056c614f3">next</a></td></tr>
+<tr class="separator:a2f9c7a2efcdc3d026190df2056c614f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">関数詳解</h2>
-<a id="ad2f793d1118692684ebf3f309c8695b4" name="ad2f793d1118692684ebf3f309c8695b4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad2f793d1118692684ebf3f309c8695b4">&#9670;&#160;</a></span>gcd_euclid()</h2>
+<h2 class="groupheader">メンバ詳解</h2>
+<a id="a6afef9b4ebeade42cf4f2c7f821a05a8" name="a6afef9b4ebeade42cf4f2c7f821a05a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6afef9b4ebeade42cf4f2c7f821a05a8">&#9670;&#160;</a></span>data</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int gcd_euclid </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">int cell::data</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a768ee7f51e9677ad1fdadbb3d97f0439" name="a768ee7f51e9677ad1fdadbb3d97f0439"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a768ee7f51e9677ad1fdadbb3d97f0439">&#9670;&#160;</a></span>gcd_recursive()</h2>
+<a id="a2f9c7a2efcdc3d026190df2056c614f3" name="a2f9c7a2efcdc3d026190df2056c614f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f9c7a2efcdc3d026190df2056c614f3">&#9670;&#160;</a></span>next</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int gcd_recursive </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>n</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>m</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
+          <td class="memname">struct <a class="el" href="structcell.html">cell</a>* cell::next</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
+<hr/>この構造体詳解は次のファイルから抽出されました:<ul>
+<li>headers/<a class="el" href="linked__list_8h_source.html">linked_list.h</a></li>
+</ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

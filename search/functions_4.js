@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['swap_0',['swap',['../utils_8h.html#a5c144b3b376d4f67686ae27cb8ef7c67',1,'swap(int *n, int *m):&#160;swap.c'],['../swap_8c.html#a5c144b3b376d4f67686ae27cb8ef7c67',1,'swap(int *n, int *m):&#160;swap.c']]]
+  ['insert_5fcell_0',['insert_cell',['../linked__list_8h.html#a9e854e148068587d5573998a453bcc4d',1,'insert_cell(Cell *p, int d):&#160;linked_list.c'],['../linked__list_8c.html#a9e854e148068587d5573998a453bcc4d',1,'insert_cell(Cell *p, int d):&#160;linked_list.c']]],
+  ['insert_5fcell_5ftop_1',['insert_cell_top',['../linked__list_8h.html#a8d2cc5e25f5bcd6a4986a9c58408f97d',1,'insert_cell_top(int d):&#160;linked_list.c'],['../linked__list_8c.html#a8d2cc5e25f5bcd6a4986a9c58408f97d',1,'insert_cell_top(int d):&#160;linked_list.c']]]
 ];

@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>dsa: headers/linked_list.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">dsa
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">読み取り中…</div>
+<div class="SRStatus" id="Searching">検索中…</div>
+<div class="SRStatus" id="NoMatches">一致する文字列を見つけられません</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">linked_list.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="linked__list_8h.html">[詳解]</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#ifndef __LINKED_LIST_H__</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#define __LINKED_LIST_H__</span></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="structcell.html">    4</a></span><span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code hl_struct" href="structcell.html">cell</a> {</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="structcell.html#a6afef9b4ebeade42cf4f2c7f821a05a8">    5</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structcell.html#a6afef9b4ebeade42cf4f2c7f821a05a8">data</a>;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno"><a class="line" href="structcell.html#a2f9c7a2efcdc3d026190df2056c614f3">    6</a></span>    <span class="keyword">struct </span><a class="code hl_struct" href="structcell.html">cell</a> *<a class="code hl_variable" href="structcell.html#a2f9c7a2efcdc3d026190df2056c614f3">next</a>;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="linked__list_8h.html#a5a015017629833d016e38b49dca7b1c3">    7</a></span>} <a class="code hl_typedef" href="linked__list_8h.html#a5a015017629833d016e38b49dca7b1c3">Cell</a>;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">extern</span> <a class="code hl_struct" href="structcell.html">Cell</a> *<a class="code hl_variable" href="linked__list_8h.html#a44a1f05f01693276467f8486df44befa">head</a>;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keywordtype">void</span> <a class="code hl_function" href="linked__list_8h.html#a9e854e148068587d5573998a453bcc4d">insert_cell</a>(<a class="code hl_struct" href="structcell.html">Cell</a> *p, <span class="keywordtype">int</span> d);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keywordtype">void</span> <a class="code hl_function" href="linked__list_8h.html#a8d2cc5e25f5bcd6a4986a9c58408f97d">insert_cell_top</a>(<span class="keywordtype">int</span> d);</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keywordtype">void</span> <a class="code hl_function" href="linked__list_8h.html#a58516ae534ed8a3b4d800076ac7e5244">delete_cell</a>(<a class="code hl_struct" href="structcell.html">Cell</a> *p);</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keywordtype">void</span> <a class="code hl_function" href="linked__list_8h.html#a55c1bb8889ab8a9edfd5777f3277898f">delete_cell_top</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keywordtype">void</span> <a class="code hl_function" href="linked__list_8h.html#a4ea013001a5fb47853d0fab8f8de35cd">display</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#endif  </span><span class="comment">// __LINKED_LIST_H__</span></div>
+<div class="ttc" id="alinked__list_8h_html_a44a1f05f01693276467f8486df44befa"><div class="ttname"><a href="linked__list_8h.html#a44a1f05f01693276467f8486df44befa">head</a></div><div class="ttdeci">Cell * head</div><div class="ttdef"><b>Definition:</b> linked_list.c:6</div></div>
+<div class="ttc" id="alinked__list_8h_html_a4ea013001a5fb47853d0fab8f8de35cd"><div class="ttname"><a href="linked__list_8h.html#a4ea013001a5fb47853d0fab8f8de35cd">display</a></div><div class="ttdeci">void display(void)</div><div class="ttdef"><b>Definition:</b> linked_list.c:21</div></div>
+<div class="ttc" id="alinked__list_8h_html_a55c1bb8889ab8a9edfd5777f3277898f"><div class="ttname"><a href="linked__list_8h.html#a55c1bb8889ab8a9edfd5777f3277898f">delete_cell_top</a></div><div class="ttdeci">void delete_cell_top(void)</div><div class="ttdef"><b>Definition:</b> linked_list.c:19</div></div>
+<div class="ttc" id="alinked__list_8h_html_a58516ae534ed8a3b4d800076ac7e5244"><div class="ttname"><a href="linked__list_8h.html#a58516ae534ed8a3b4d800076ac7e5244">delete_cell</a></div><div class="ttdeci">void delete_cell(Cell *p)</div><div class="ttdef"><b>Definition:</b> linked_list.c:17</div></div>
+<div class="ttc" id="alinked__list_8h_html_a5a015017629833d016e38b49dca7b1c3"><div class="ttname"><a href="linked__list_8h.html#a5a015017629833d016e38b49dca7b1c3">Cell</a></div><div class="ttdeci">struct cell Cell</div></div>
+<div class="ttc" id="alinked__list_8h_html_a8d2cc5e25f5bcd6a4986a9c58408f97d"><div class="ttname"><a href="linked__list_8h.html#a8d2cc5e25f5bcd6a4986a9c58408f97d">insert_cell_top</a></div><div class="ttdeci">void insert_cell_top(int d)</div><div class="ttdef"><b>Definition:</b> linked_list.c:10</div></div>
+<div class="ttc" id="alinked__list_8h_html_a9e854e148068587d5573998a453bcc4d"><div class="ttname"><a href="linked__list_8h.html#a9e854e148068587d5573998a453bcc4d">insert_cell</a></div><div class="ttdeci">void insert_cell(Cell *p, int d)</div><div class="ttdef"><b>Definition:</b> linked_list.c:8</div></div>
+<div class="ttc" id="astructcell_html"><div class="ttname"><a href="structcell.html">cell</a></div><div class="ttdef"><b>Definition:</b> linked_list.h:4</div></div>
+<div class="ttc" id="astructcell_html_a2f9c7a2efcdc3d026190df2056c614f3"><div class="ttname"><a href="structcell.html#a2f9c7a2efcdc3d026190df2056c614f3">cell::next</a></div><div class="ttdeci">struct cell * next</div><div class="ttdef"><b>Definition:</b> linked_list.h:6</div></div>
+<div class="ttc" id="astructcell_html_a6afef9b4ebeade42cf4f2c7f821a05a8"><div class="ttname"><a href="structcell.html#a6afef9b4ebeade42cf4f2c7f821a05a8">cell::data</a></div><div class="ttdeci">int data</div><div class="ttdef"><b>Definition:</b> linked_list.h:5</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築:&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>
