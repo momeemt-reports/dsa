@@ -16,7 +16,7 @@ CREATE_SUBDIRS_LEVEL   = 8
 
 ALLOW_UNICODE_NAMES    = NO
 
-OUTPUT_LANGUAGE        = Japanese
+OUTPUT_LANGUAGE        = English
 
 BRIEF_MEMBER_DESC      = YES
 
@@ -214,12 +214,11 @@ INPUT_ENCODING         = UTF-8
 
 INPUT_FILE_ENCODING    =
 
-FILE_PATTERNS          = *.c \
-                         *.h
+FILE_PATTERNS          = *.h
 
 RECURSIVE              = YES
 
-EXCLUDE                =
+EXCLUDE                = reports
 
 EXCLUDE_SYMLINKS       = NO
 
