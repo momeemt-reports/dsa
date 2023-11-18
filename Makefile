@@ -38,8 +38,8 @@ $(TEST_BIN_DIR)/test_binarysearchtree_out: $(TEST_DIR)/test_binarysearchtree.c $
 $(TEST_BIN_DIR)/test_bst_advanced_out: $(TEST_DIR)/test_bst_advanced.c $(OBJ_DIR)/bst_advanced.o
 	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
 
-$(TEST_BIN_DIR)/%_out: $(TEST_DIR)/%.c $(OBJS)
-	$(CC) $(TEST_CFLAGS) $< $(OBJS) $(TEST_LIB) -o $@
+$(TEST_BIN_DIR)/%_out: $(TEST_DIR)/%.c $(filter-out $(OBJ_DIR)/binarytree.o $(OBJ_DIR)/binarysearchtree.o $(OBJ_DIR)/bst_advanced.o, $(OBJS))
+	$(CC) $(TEST_CFLAGS) $< $(filter-out $(OBJ_DIR)/binarytree.o $(OBJ_DIR)/binarysearchtree.o $(OBJ_DIR)/bst_advanced.o, $(OBJS)) $(TEST_LIB) -o $@
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADERS)
 	mkdir -p $(@D)
