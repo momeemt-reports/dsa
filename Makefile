@@ -23,6 +23,21 @@ test_run:
 
 test: $(TEST_EXES)
 
+binarytree: ./test/bin/test_binarytree_out
+
+binarysearchtree: ./test/bin/test_binarysearchtree_out
+
+bst_advanced: ./test/bin/test_bst_advanced_out
+
+$(TEST_BIN_DIR)/test_binarytree_out: $(TEST_DIR)/test_binarytree.c $(OBJ_DIR)/binarytree.o $(OBJ_DIR)/queue.o
+	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
+
+$(TEST_BIN_DIR)/test_binarysearchtree_out: $(TEST_DIR)/test_binarysearchtree.c $(OBJ_DIR)/binarysearchtree.o
+	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
+
+$(TEST_BIN_DIR)/test_bst_advanced_out: $(TEST_DIR)/test_bst_advanced.c $(OBJ_DIR)/bst_advanced.o
+	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
+
 $(TEST_BIN_DIR)/%_out: $(TEST_DIR)/%.c $(OBJS)
 	$(CC) $(TEST_CFLAGS) $< $(OBJS) $(TEST_LIB) -o $@
 
@@ -36,6 +51,7 @@ generate_documentation:
 clean:
 	rm -f $(OBJS)
 	rm -f $(TEST_EXES)
+	rm -f test/graph/*
 	rm -rf result
 	rm -rf html
 
