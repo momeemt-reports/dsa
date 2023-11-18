@@ -38,6 +38,4 @@ jobs:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v22
       - run: nix-env -f ./nix/pkgs.nix -iA llvmPackages_16.clang-unwrapped
-      - run: |
-          clang-tidy --checks **/*.c
-          clang-tidy --checks **/*.h
+      - run: make tidy

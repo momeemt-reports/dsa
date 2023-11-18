@@ -48,6 +48,10 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADERS)
 generate_documentation:
 	doxygen Doxyfile
 
+tidy:
+	INCLUDES=$$(clang -E -x c - -v < /dev/null 2>&1 | sed -n '/#include <...> search starts here:/,/End of search list./p' | grep -vE '#include|End of search list.'); \
+	clang-tidy $(SRCS) --checks=* -- -I$(HEADER_DIR) $$(echo $$INCLUDES | sed 's/ / -I/g')
+
 clean:
 	rm -f $(OBJS)
 	rm -f $(TEST_EXES)
