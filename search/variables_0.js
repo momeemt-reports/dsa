@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['called_5ffibonacci_0',['called_fibonacci',['../fibonacci_8h.html#a5774b4c2cea21a1089523279b5ae643c',1,'called_fibonacci():&#160;recursive.c'],['../recursive_8c.html#a5774b4c2cea21a1089523279b5ae643c',1,'called_fibonacci():&#160;recursive.c']]]
+  ['b_0',['B',['../structdict__open__addr.html#abbe4e870354d8ea74fab96c6aecc9dd3',1,'dict_open_addr']]],
+  ['buffer_1',['buffer',['../structQueue.html#a3b1cebf65bbc642aad4dc905996727a5',1,'Queue']]]
 ];

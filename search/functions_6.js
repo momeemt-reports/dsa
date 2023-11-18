@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['swap_0',['swap',['../utils_8h.html#a5c144b3b376d4f67686ae27cb8ef7c67',1,'swap(int *n, int *m):&#160;swap.c'],['../swap_8c.html#a5c144b3b376d4f67686ae27cb8ef7c67',1,'swap(int *n, int *m):&#160;swap.c']]]
+  ['g_0',['g',['../open__addressing_8h.html#a83c255001466ad94f136751bf4131e6c',1,'open_addressing.h']]],
+  ['gcd_5feuclid_1',['gcd_euclid',['../gcd_8h.html#ad2f793d1118692684ebf3f309c8695b4',1,'gcd.h']]],
+  ['gcd_5fiter_2',['gcd_iter',['../gcd_8h.html#ab1da1a196c4768ad2227c60e54cf0a28',1,'gcd.h']]],
+  ['gcd_5frecursive_3',['gcd_recursive',['../gcd_8h.html#a768ee7f51e9677ad1fdadbb3d97f0439',1,'gcd.h']]]
 ];

@@ -1,7 +1,11 @@
 var searchData=
 [
-  ['data_0',['data',['../structcell.html#a6afef9b4ebeade42cf4f2c7f821a05a8',1,'cell']]],
-  ['delete_5fcell_1',['delete_cell',['../linked__list_8h.html#a58516ae534ed8a3b4d800076ac7e5244',1,'delete_cell(Cell *p):&#160;linked_list.c'],['../linked__list_8c.html#a58516ae534ed8a3b4d800076ac7e5244',1,'delete_cell(Cell *p):&#160;linked_list.c']]],
-  ['delete_5fcell_5ftop_2',['delete_cell_top',['../linked__list_8h.html#a55c1bb8889ab8a9edfd5777f3277898f',1,'delete_cell_top(void):&#160;linked_list.c'],['../linked__list_8c.html#a55c1bb8889ab8a9edfd5777f3277898f',1,'delete_cell_top(void):&#160;linked_list.c']]],
-  ['display_3',['display',['../linked__list_8h.html#a4ea013001a5fb47853d0fab8f8de35cd',1,'display(void):&#160;linked_list.c'],['../linked__list_8c.html#a4ea013001a5fb47853d0fab8f8de35cd',1,'display(void):&#160;linked_list.c']]]
+  ['called_5ffibonacci_0',['called_fibonacci',['../fibonacci_8h.html#a5774b4c2cea21a1089523279b5ae643c',1,'fibonacci.h']]],
+  ['cell_1',['cell',['../structcell.html',1,'']]],
+  ['cell_2',['Cell',['../linked__list_8h.html#a5a015017629833d016e38b49dca7b1c3',1,'linked_list.h']]],
+  ['create_5fdict_3',['create_dict',['../open__addressing_8h.html#a7d9b019b3cc0e62a23e5b69154cf4038',1,'open_addressing.h']]],
+  ['create_5fmirror_4',['create_mirror',['../binarytree_8h.html#afaf96935c69e0e0bca51805d6bb714d4',1,'binarytree.h']]],
+  ['create_5fqueue_5',['create_queue',['../queue_8h.html#a6123d4e9ff3a6cba3a7e002213a0c661',1,'queue.h']]],
+  ['create_5ftree_6',['create_tree',['../binarytree_8h.html#a296243ddd8dbc41d1095a1f33c6a2617',1,'binarytree.h']]],
+  ['createcell_7',['CreateCell',['../doublylinked__list_8h.html#aa1cb762d006be76426ad7da276626b2d',1,'doublylinked_list.h']]]
 ];

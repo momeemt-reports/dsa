@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['fibonacci_5frecursive_0',['fibonacci_recursive',['../fibonacci_8h.html#afc5b08ef1f0d905f453a22f6a3f60955',1,'fibonacci_recursive(int n):&#160;recursive.c'],['../recursive_8c.html#afc5b08ef1f0d905f453a22f6a3f60955',1,'fibonacci_recursive(int n):&#160;recursive.c']]],
-  ['fibonacci_5frecursive_5ftest_5f1_1',['fibonacci_recursive_test_1',['../test__fibonacci_8c.html#abddeb042f7b7031e8b0bd8665d53800b',1,'test_fibonacci.c']]],
-  ['fibonacci_5frecursive_5ftest_5f2_2',['fibonacci_recursive_test_2',['../test__fibonacci_8c.html#aaf03f4b7efb8c483709d9c70c39d2173',1,'test_fibonacci.c']]],
-  ['fibonacci_5frecursive_5ftest_5f3_3',['fibonacci_recursive_test_3',['../test__fibonacci_8c.html#adf453f7931fbf3d99ff650904f83ba48',1,'test_fibonacci.c']]]
+  ['create_5fdict_0',['create_dict',['../open__addressing_8h.html#a7d9b019b3cc0e62a23e5b69154cf4038',1,'open_addressing.h']]],
+  ['create_5fmirror_1',['create_mirror',['../binarytree_8h.html#afaf96935c69e0e0bca51805d6bb714d4',1,'binarytree.h']]],
+  ['create_5fqueue_2',['create_queue',['../queue_8h.html#a6123d4e9ff3a6cba3a7e002213a0c661',1,'queue.h']]],
+  ['create_5ftree_3',['create_tree',['../binarytree_8h.html#a296243ddd8dbc41d1095a1f33c6a2617',1,'binarytree.h']]],
+  ['createcell_4',['CreateCell',['../doublylinked__list_8h.html#aa1cb762d006be76426ad7da276626b2d',1,'doublylinked_list.h']]]
 ];
