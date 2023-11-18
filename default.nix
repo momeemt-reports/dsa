@@ -6,8 +6,10 @@ pkgs.stdenv.mkDerivation rec {
   src = ./.;
   
   buildInputs = with pkgs; [
-    gcc
+    llvmPackages_16.libcxxClang
+    llvmPackages_16.clang-unwrapped
     gnumake
+    gnuplot
     cunit
   ];
 

@@ -2,18 +2,18 @@ name: CI
 on:
   push:
     paths:
-      - '**/*.c'
-      - '**/*.h'
-      - '.github/workflows/*'
-      - 'Makefile'
-      - '**/*.nix'
+      - "**/*.c"
+      - "**/*.h"
+      - ".github/workflows/*"
+      - "Makefile"
+      - "**/*.nix"
   pull_request:
     paths:
-      - '**/*.c'
-      - '**/*.h'
-      - '.github/workflows/*'
-      - 'Makefile'
-      - '**/*.nix'
+      - "**/*.c"
+      - "**/*.h"
+      - ".github/workflows/*"
+      - "Makefile"
+      - "**/*.nix"
 
 jobs:
   test:
@@ -28,12 +28,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v22
-      - run: nix-env -f ../nix/pkgs.nix -iA llvmPackages_16.clang-unwrapped
+      - run: nix-env -f ./nix/pkgs.nix -iA llvmPackages_16.clang-unwrapped
       - run: clang-format --dry-run --Werror **/*.(c|h)
   clang-tidy:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
       - uses: cachix/install-nix-action@v22
-      - run: nix-env -f ../nix/pkgs.nix -iA llvmPackages_16.clang-unwrapped
+      - run: nix-env -f ./nix/pkgs.nix -iA llvmPackages_16.clang-unwrapped
       - run: clang-tidy --checks **/*.(c|h)
