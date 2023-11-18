@@ -4,5 +4,5 @@ var searchData=
   ['h_1',['h',['../open__addressing_8h.html#a0d8492dff37bcdad4b04159685911ddb',1,'open_addressing.h']]],
   ['hash_5ftable_5fprime_2',['HASH_TABLE_PRIME',['../open__addressing_8h.html#adfeca8fe76c610fd3ca8ea91d6703a49',1,'open_addressing.h']]],
   ['head_3',['head',['../linked__list_8h.html#a44a1f05f01693276467f8486df44befa',1,'linked_list.h']]],
-  ['height_4',['height',['../binarytree_8h.html#a4af6752a1b7e972b6b108010956f41b2',1,'binarytree.h']]]
+  ['height_4',['height',['../structnode.html#a522298f219c14128a6027ee43046ea15',1,'node::height()'],['../binarytree_8h.html#a4af6752a1b7e972b6b108010956f41b2',1,'height():&#160;binarytree.h']]]
 ];

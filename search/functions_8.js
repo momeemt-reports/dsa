@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['inorder_0',['inorder',['../binarysearchtree_8h.html#aa9861ce736aeb379a0f6f16e9037c432',1,'inorder(Node *root):&#160;binarysearchtree.h'],['../binarytree_8h.html#a0b011c94e9e2bc4650f884e12ac59610',1,'inorder(Node *n):&#160;binarytree.h']]],
-  ['insert_5fbst_1',['insert_bst',['../binarysearchtree_8h.html#a2fb867d9bde7dcf0175035da8856f813',1,'binarysearchtree.h']]],
+  ['inorder_0',['inorder',['../binarysearchtree_8h.html#aa9861ce736aeb379a0f6f16e9037c432',1,'inorder(Node *root):&#160;binarysearchtree.h'],['../binarytree_8h.html#a0b011c94e9e2bc4650f884e12ac59610',1,'inorder(Node *n):&#160;binarytree.h'],['../bst__advanced_8h.html#aa9861ce736aeb379a0f6f16e9037c432',1,'inorder(Node *root):&#160;bst_advanced.h']]],
+  ['insert_5fbst_1',['insert_bst',['../binarysearchtree_8h.html#a2fb867d9bde7dcf0175035da8856f813',1,'insert_bst(Node **root, int d):&#160;binarysearchtree.h'],['../bst__advanced_8h.html#aabf53e981c4c33b314815db2edc463ee',1,'insert_bst(Node *root, int d):&#160;bst_advanced.h']]],
   ['insert_5fcell_2',['insert_cell',['../linked__list_8h.html#a9e854e148068587d5573998a453bcc4d',1,'linked_list.h']]],
   ['insert_5fcell_5ftop_3',['insert_cell_top',['../linked__list_8h.html#a8d2cc5e25f5bcd6a4986a9c58408f97d',1,'linked_list.h']]],
   ['insert_5fhash_4',['insert_hash',['../open__addressing_8h.html#a894e81f7260bd88b51aa39c17bcafbff',1,'open_addressing.h']]],
