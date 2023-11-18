@@ -1,4 +1,5 @@
 #include "gcd.h"
+
 #include "utils.h"
 
 int gcd_euclid(int n, int m) {
