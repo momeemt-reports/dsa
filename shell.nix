@@ -4,6 +4,8 @@ pkgs.mkShell {
     llvmPackages_16.libcxxClang
     llvmPackages_16.clang-unwrapped
     gnumake
+    gnuplot
     cunit
+    doxygen
   ];
 }
