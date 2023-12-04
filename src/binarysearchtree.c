@@ -4,10 +4,10 @@ int min_bst(Node *root) {
     if (root == NULL) {
         return -1;
     }
-    while (root->left != NULL) {
-        root = root->left;
+    if (root->left == NULL) {
+        return root->value;
     }
-    return root->value;
+    return min_bst(root->left);
 }
 
 bool search_bst(Node *root, int d) {

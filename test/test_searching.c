@@ -29,14 +29,14 @@ int main(void) {
 
 void binary_search_test_1(void) {
     int arr[15] = {0, 29, 30, 37, 41, 53, 53, 57, 59, 61, 62, 75, 79, 90, 92};
-    int result = binary_search(arr, 15, 30);
+    binary_search(arr, 15, 30);
     CU_ASSERT_EQUAL(1, 1);
     return;
 }
 
 void binary_search_test_2(void) {
     int arr[15] = {0, 29, 30, 37, 41, 53, 53, 57, 59, 61, 62, 75, 79, 90, 92};
-    int result = binary_search(arr, 15, 60);
+    binary_search(arr, 15, 60);
     CU_ASSERT_EQUAL(1, 1);
     return;
 }

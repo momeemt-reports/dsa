@@ -4,6 +4,7 @@ SRC_DIR := ./src
 OBJ_DIR := ./obj
 HEADER_DIR := ./headers
 TEST_DIR := ./test
+TEST_HEADER_DIR := ./test/headers
 TEST_BIN_DIR := ./test/bin
 RESULT_BIN_DIR := ./result/bin
 
@@ -12,7 +13,7 @@ OBJS := $(patsubst $(SRC_DIR)/%,$(OBJ_DIR)/%,$(SRCS:.c=.o))
 HEADERS := $(wildcard $(HEADER_DIR)/**/*.h)
 CFLAGS := -W -Wall -I$(HEADER_DIR)
 
-TEST_CFLAGS := $(CFLAGS)
+TEST_CFLAGS := $(CFLAGS) -I$(TEST_HEADER_DIR)
 TEST_LIB := -lcunit
 TEST_FILES := $(wildcard $(TEST_DIR)/*.c)
 TEST_EXES := $(patsubst $(TEST_DIR)/%.c,$(TEST_BIN_DIR)/%_out,$(TEST_FILES))
@@ -48,9 +49,11 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c $(HEADERS)
 generate_documentation:
 	doxygen Doxyfile
 
+.PHONY: tidy
 tidy:
-	INCLUDES=$$(clang -E -x c - -v < /dev/null 2>&1 | sed -n '/#include <...> search starts here:/,/End of search list./p' | grep -vE '#include|End of search list.'); \
-	clang-tidy $(SRCS) --checks=* -- -I$(HEADER_DIR) $$(echo $$INCLUDES | sed 's/ / -I/g')
+	INCLUDES=$$(clang -E -x c - -v < /dev/null 2>&1 | sed -n '/\#include <...> search starts here:/,/End of search list./p' | grep -vE '\#include|End of search list.')
+	CUNIT_INCLUDE_PATH=$$(nix-shell -p cunit --run "echo $$CUNIT_INCLUDE_PATH")
+	clang-tidy $(SRCS) $(HEADERS) $(TEST_FILES) -- -I$(HEADER_DIR) $$(echo $$INCLUDES | sed 's/ / -I/g') $$CUNIT_INCLUDE_PATH
 
 clean:
 	rm -f $(OBJS)

@@ -1,17 +1,4 @@
-#include <CUnit/Basic.h>
-#include <CUnit/CUnit.h>
-#include <CUnit/TestDB.h>
-
-#include "binarytree.h"
-
-void binarytree_test_preorder(void);
-void binarytree_test_inorder(void);
-void binarytree_test_postorder(void);
-void binarytree_test_display(void);
-void binarytree_test_breadth_first(void);
-void binarytree_test_height(void);
-void binarytree_test_create_mirror(void);
-void binarytree_test_are_mirrors(void);
+#include "test_binarytree.h"
 
 int main(void) {
     CU_initialize_registry();
@@ -36,8 +23,10 @@ int main(void) {
                 binarytree_test_height);
     CU_add_test(binarytree_suite, "Binarytree_Test_Create_Mirror",
                 binarytree_test_create_mirror);
-    CU_add_test(binarytree_suite, "Binarytree_Test_Are_Mirrors",
-                binarytree_test_are_mirrors);
+    CU_add_test(binarytree_suite, "Binarytree_Test_Are_Mirrors_True",
+                binarytree_test_are_mirrors_true);
+    CU_add_test(binarytree_suite, "Binarytree_Test_Are_Mirrors_False",
+                binarytree_test_are_mirrors_false);
 
     CU_basic_run_tests();
     int ret = CU_get_number_of_failures();
@@ -132,10 +121,18 @@ void binarytree_test_create_mirror(void) {
     delete_tree(mirror);
 }
 
-void binarytree_test_are_mirrors(void) {
+void binarytree_test_are_mirrors_true(void) {
     Node *tree = create_tree_for_test();
     Node *mirror = create_mirror_tree_for_test();
     CU_ASSERT_TRUE(are_mirrors(tree, mirror));
     delete_tree(tree);
     delete_tree(mirror);
+}
+
+void binarytree_test_are_mirrors_false(void) {
+    Node *tree1 = create_tree_for_test();
+    Node *tree2 = create_tree("J", NULL, create_tree_for_test());
+    CU_ASSERT_FALSE(are_mirrors(tree1, tree2));
+    delete_tree(tree1);
+    delete_tree(tree2);
 }

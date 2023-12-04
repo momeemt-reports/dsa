@@ -68,11 +68,8 @@ int main(void) {
 }
 
 Node *create_tree_for_test(void) {
-    Node *root = (Node *)malloc(sizeof(Node));
-    root->value = 10;
-    root->left = NULL;
-    root->right = NULL;
-
+    Node *root = NULL;
+    insert_bst(&root, 10);
     insert_bst(&root, 15);
     insert_bst(&root, 18);
     insert_bst(&root, 6);
