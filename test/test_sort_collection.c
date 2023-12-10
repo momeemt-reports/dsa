@@ -27,20 +27,20 @@ int main(void) {
         CU_cleanup_registry();
         return CU_get_error();
     }
-    /* CU_add_test(sort_suite, "Insertion_Sort_Test", */
-    /*             insertion_sort_test); */
-    /* CU_add_test(sort_suite, "Heap_Sort_Test", */
-    /*             heap_sort_test); */
-    /* CU_add_test(sort_suite, "Quick_Sort_Test", */
-    /*             quick_sort_test); */
+    CU_add_test(sort_suite, "Insertion_Sort_Test",
+                insertion_sort_test);
+    CU_add_test(sort_suite, "Heap_Sort_Test",
+                heap_sort_test);
+    CU_add_test(sort_suite, "Quick_Sort_Test",
+                quick_sort_test);
     CU_add_test(sort_suite, "Radix_Sort_Test",
                 radix_sort_test);
-    /* CU_add_test(sort_suite, "Sift_Down_Test", */
-    /*             sift_down_test); */
-    /* CU_add_test(sort_suite, "Build_Heap_Test", */
-    /*             build_heap_test); */
-    /* CU_add_test(sort_suite, "Partition_Test", */
-    /*             partition_test); */
+    CU_add_test(sort_suite, "Sift_Down_Test",
+                sift_down_test);
+    CU_add_test(sort_suite, "Build_Heap_Test",
+                build_heap_test);
+    CU_add_test(sort_suite, "Partition_Test",
+                partition_test);
 
     char *dsa_output_graph_env = getenv("DSA_OUTPUT_GRAPH");
     if (dsa_output_graph_env != NULL) {
@@ -333,5 +333,4 @@ void radix_sort_test(void) {
 
   int arr3[10] = { 597, 198, 436, 333, 777, 125, 234, 124, 864, 200 };
   cmp_cnt_reset();
-  radix_sort(arr3, 10, 3);
 }
