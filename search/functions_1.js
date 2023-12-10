@@ -17,5 +17,6 @@ var searchData=
   ['binarytree_5fto_5fstring_5fby_5finorder_14',['binarytree_to_string_by_inorder',['../binarytree_8h.html#abbfdb140fb7a269631993018be09e047',1,'binarytree.h']]],
   ['binarytree_5fto_5fstring_5fby_5fpostorder_15',['binarytree_to_string_by_postorder',['../binarytree_8h.html#a322e8cae4e931bced74deeb12e9bf3cd',1,'binarytree.h']]],
   ['binarytree_5fto_5fstring_5fby_5fpreorder_16',['binarytree_to_string_by_preorder',['../binarytree_8h.html#aa27aa31af134329694ae523602315685',1,'binarytree.h']]],
-  ['breadth_5ffirst_5fsearch_17',['breadth_first_search',['../binarytree_8h.html#a94841a9e2cb545744bd3353396ad9d2c',1,'binarytree.h']]]
+  ['breadth_5ffirst_5fsearch_17',['breadth_first_search',['../binarytree_8h.html#a94841a9e2cb545744bd3353396ad9d2c',1,'binarytree.h']]],
+  ['build_5fheap_18',['build_heap',['../sort__collection_8h.html#a4870b9d41f156af4d225d3a453900972',1,'sort_collection.h']]]
 ];

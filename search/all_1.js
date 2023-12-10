@@ -22,5 +22,6 @@ var searchData=
   ['binarytree_5fto_5fstring_5fby_5fpreorder_19',['binarytree_to_string_by_preorder',['../binarytree_8h.html#aa27aa31af134329694ae523602315685',1,'binarytree.h']]],
   ['breadth_5ffirst_5fsearch_20',['breadth_first_search',['../binarytree_8h.html#a94841a9e2cb545744bd3353396ad9d2c',1,'binarytree.h']]],
   ['bst_5fadvanced_2eh_21',['bst_advanced.h',['../bst__advanced_8h.html',1,'']]],
-  ['buffer_22',['buffer',['../structQueue.html#a3b1cebf65bbc642aad4dc905996727a5',1,'Queue']]]
+  ['buffer_22',['buffer',['../structQueue.html#a3b1cebf65bbc642aad4dc905996727a5',1,'Queue']]],
+  ['build_5fheap_23',['build_heap',['../sort__collection_8h.html#a4870b9d41f156af4d225d3a453900972',1,'sort_collection.h']]]
 ];

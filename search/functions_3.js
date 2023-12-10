@@ -14,7 +14,7 @@ var searchData=
   ['deletecell_11',['DeleteCell',['../doublylinked__list_8h.html#a7ecb6532c964578197efae89a08c2fd0',1,'doublylinked_list.h']]],
   ['dequeue_12',['dequeue',['../queue_8h.html#af59eb0f81ef4aeb7e2e8da8bd1abcad5',1,'queue.h']]],
   ['display_13',['Display',['../doublylinked__list_8h.html#a9536b1855a31ddddf1ccfba533f06017',1,'doublylinked_list.h']]],
-  ['display_14',['display',['../binarysearchtree_8h.html#aaadc2ed79ecbe16101e650e80b9f8052',1,'display(Node *root):&#160;binarysearchtree.h'],['../binarytree_8h.html#a548f61ca2f07b6da63ab3d17854de135',1,'display(Node *n):&#160;binarytree.h'],['../bst__advanced_8h.html#aaadc2ed79ecbe16101e650e80b9f8052',1,'display(Node *root):&#160;bst_advanced.h']]],
+  ['display_14',['display',['../binarysearchtree_8h.html#aaadc2ed79ecbe16101e650e80b9f8052',1,'display(Node *root):&#160;binarysearchtree.h'],['../binarytree_8h.html#a548f61ca2f07b6da63ab3d17854de135',1,'display(Node *n):&#160;binarytree.h'],['../bst__advanced_8h.html#aaadc2ed79ecbe16101e650e80b9f8052',1,'display(Node *root):&#160;bst_advanced.h'],['../sort__collection_8h.html#a8d390da9185f909445dc3c516140bd66',1,'display(int a[], int n):&#160;sort_collection.h']]],
   ['display_5fdict_5fopen_5faddr_15',['display_dict_open_addr',['../open__addressing_8h.html#ab554c49c801efb0c8aeb66601e28f46a',1,'open_addressing.h']]],
   ['display_5flinked_5flist_16',['display_linked_list',['../linked__list_8h.html#a3e6a027bb2c55646cd4679289142980e',1,'linked_list.h']]],
   ['display_5fqueue_17',['display_queue',['../queue_8h.html#a4512f981c5d265830f992fde6a87b578',1,'queue.h']]],
