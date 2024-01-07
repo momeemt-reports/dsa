@@ -1,6 +1,6 @@
-#ifndef _UTILS_H_
-#define _UTILS_H_
+#ifndef UTILS_H
+#define UTILS_H
 
-void swap(int *n, int *m);
+void utils_swap(int *n, int *m);
 
-#endif  // _UTILS_H_
+#endif  // UTILS_H

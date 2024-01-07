@@ -23,7 +23,7 @@ int gcd_recursive(int n, int m) {
 
 int gcd_iter(int n, int m) {
     if (n > m) {
-        swap(&n, &m);
+        utils_swap(&n, &m);
     }
     int gcd = 1;
     int i = 1;
