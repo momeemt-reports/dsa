@@ -30,6 +30,10 @@ binarysearchtree: ./test/bin/test_binarysearchtree_out
 
 bst_advanced: ./test/bin/test_bst_advanced_out
 
+dijkstra: ./test/bin/test_dijkstra_out
+
+floyd: ./test/bin/test_floyd_out
+
 $(TEST_BIN_DIR)/test_binarytree_out: $(TEST_DIR)/test_binarytree.c $(OBJ_DIR)/binarytree.o $(OBJ_DIR)/queue.o
 	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
 
@@ -40,6 +44,12 @@ $(TEST_BIN_DIR)/test_bst_advanced_out: $(TEST_DIR)/test_bst_advanced.c $(OBJ_DIR
 	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
 
 $(TEST_BIN_DIR)/test_sort_collection_out: $(TEST_DIR)/test_sort_collection.c $(OBJ_DIR)/sort_collection.o $(OBJ_DIR)/timer.o
+	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
+
+$(TEST_BIN_DIR)/test_dijkstra_out: $(TEST_DIR)/test_dijkstra.c $(OBJ_DIR)/dijkstra.o
+	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
+
+$(TEST_BIN_DIR)/test_floyd_out: $(TEST_DIR)/test_floyd.c $(OBJ_DIR)/floyd.o
 	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
 
 $(TEST_BIN_DIR)/%_out: $(TEST_DIR)/%.c $(filter-out $(OBJ_DIR)/binarytree.o $(OBJ_DIR)/binarysearchtree.o $(OBJ_DIR)/bst_advanced.o, $(OBJS))
@@ -54,9 +64,7 @@ generate_documentation:
 
 .PHONY: tidy
 tidy:
-	INCLUDES=$$(clang -E -x c - -v < /dev/null 2>&1 | sed -n '/\#include <...> search starts here:/,/End of search list./p' | grep -vE '\#include|End of search list.')
-	CUNIT_INCLUDE_PATH=$$(nix-shell -p cunit --run "echo $$CUNIT_INCLUDE_PATH")
-	clang-tidy $(SRCS) $(HEADERS) $(TEST_FILES) -- -I$(HEADER_DIR) $$(echo $$INCLUDES | sed 's/ / -I/g') $$CUNIT_INCLUDE_PATH
+	clang-tidy $(SRCS) $(TEST_FILES) -- -W -Wall -Iheaders -Itest/headers -I$${CUNIT_INCLUDE_DIR} -isystem"$${CLANG_INCLUDE_DIR}" -isystem"$${LIBC_INCLUDE_DIR}" -isystem"$${CUNIT_INCLUDE_DIR}"
 
 clean:
 	rm -f $(OBJS)

@@ -5,3 +5,5 @@ html/
 *.a
 CMakeFiles/
 Testing/
+build/
+compile_commands.json
