@@ -4,5 +4,6 @@ var searchData=
   ['gcd_2eh_1',['gcd.h',['../gcd_8h.html',1,'']]],
   ['gcd_5feuclid_2',['gcd_euclid',['../gcd_8h.html#ad2f793d1118692684ebf3f309c8695b4',1,'gcd.h']]],
   ['gcd_5fiter_3',['gcd_iter',['../gcd_8h.html#ab1da1a196c4768ad2227c60e54cf0a28',1,'gcd.h']]],
-  ['gcd_5frecursive_4',['gcd_recursive',['../gcd_8h.html#a768ee7f51e9677ad1fdadbb3d97f0439',1,'gcd.h']]]
+  ['gcd_5frecursive_4',['gcd_recursive',['../gcd_8h.html#a768ee7f51e9677ad1fdadbb3d97f0439',1,'gcd.h']]],
+  ['get_5fshortest_5fpath_5',['get_shortest_path',['../dijkstra_8h.html#ad401f62e348b858c59b424db5c945e72',1,'dijkstra.h']]]
 ];
