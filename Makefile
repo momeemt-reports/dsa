@@ -34,6 +34,12 @@ dijkstra: ./test/bin/test_dijkstra_out
 
 floyd: ./test/bin/test_floyd_out
 
+naive: ./test/bin/test_naive_out
+
+compnext: ./test/bin/test_compnext_out
+
+kmp: ./test/bin/test_kmp_out
+
 $(TEST_BIN_DIR)/test_binarytree_out: $(TEST_DIR)/test_binarytree.c $(OBJ_DIR)/binarytree.o $(OBJ_DIR)/queue.o
 	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
 
@@ -50,6 +56,15 @@ $(TEST_BIN_DIR)/test_dijkstra_out: $(TEST_DIR)/test_dijkstra.c $(OBJ_DIR)/dijkst
 	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
 
 $(TEST_BIN_DIR)/test_floyd_out: $(TEST_DIR)/test_floyd.c $(OBJ_DIR)/floyd.o
+	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
+
+$(TEST_BIN_DIR)/test_naive_out: $(TEST_DIR)/test_naive.c $(OBJ_DIR)/naive.o $(OBJ_DIR)/cmp.o
+	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
+
+$(TEST_BIN_DIR)/test_compnext_out: $(TEST_DIR)/test_compnext.c $(OBJ_DIR)/compnext.o
+	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
+
+$(TEST_BIN_DIR)/test_kmp_out: $(TEST_DIR)/test_kmp.c $(OBJ_DIR)/kmp.o $(OBJ_DIR)/compnext.o
 	$(CC) $(TEST_CFLAGS) $^ $(TEST_LIB) -o $@
 
 $(TEST_BIN_DIR)/%_out: $(TEST_DIR)/%.c $(filter-out $(OBJ_DIR)/binarytree.o $(OBJ_DIR)/binarysearchtree.o $(OBJ_DIR)/bst_advanced.o, $(OBJS))

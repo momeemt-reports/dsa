@@ -1,11 +1,15 @@
 {
     "files.associations": {
-        "testdb.h": "c",
-        "euclid.h": "c",
-        "basic.h": "c"
-    },
-    "editor.formatOnSave": true,
-    "C_Cpp.formatting": "clangFormat",
-    "nixEnvSelector.suggestion": false,
-    "nixEnvSelector.nixFile": "${workspaceRoot}/shell.nix"
+        "utils.h": "c",
+        "sort_collection.h": "c",
+        "open_addressing.h": "c",
+        "basic.h": "c",
+        "bst_advanced.h": "c",
+        "dijkstra.h": "c",
+        "naive.h": "c",
+        "kmp.h": "c",
+        "cmp.h": "c",
+        "stdio.h": "c",
+        "stdbool.h": "c"
+    }
 }
