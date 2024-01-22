@@ -3,10 +3,12 @@
 #include <CUnit/TestDB.h>
 
 #include "naive.h"
+#include "kmp.h"
 
 void naive_test_matching();
 void naive_test_mismatch();
-void naive_survey_cmp_count();
+void survey_cmp_count();
+void survey_cmp_count_worst_case();
 
 int main(void) {
     CU_initialize_registry();
@@ -19,7 +21,8 @@ int main(void) {
     CU_add_test(naive_suite, "naive_Test_Matching", naive_test_matching);
     CU_add_test(naive_suite, "naive_Test_Mismatch", naive_test_mismatch);
 
-    naive_survey_cmp_count();
+    // survey_cmp_count();
+    // survey_cmp_count_worst_case();
 
     CU_basic_run_tests();
     int ret = CU_get_number_of_failures();
@@ -54,52 +57,124 @@ void naive_test_mismatch() {
 
 void random_text(int textlen, char *text) {
     for (int i = 0; i < textlen; i++) {
-        text[i] = rand() % 26 + 'a';
+        text[i] = rand() % 2 + 'a';
     }
     text[textlen] = '\0';
 }
 
-void naive_survey_cmp_count() {
-    const int MAX_TEXT_LENGTH = 1000;
-    const int MAX_PAT_LENGTH = 100;
-    int cmp_count_data[MAX_TEXT_LENGTH][MAX_PAT_LENGTH];
+void worst_case_text(int textlen, char *text) {
+    for (int i = 0; i < textlen; i++) {
+        text[i] = 'a';
+    }
+    text[textlen] = '\0';
+}
+
+void survey_cmp_count() {
+    const int MAX_TEXT_LENGTH = 10000;
+    const int PAT_LENGTH = 30;
+
+    const int SEED = 19;
+    srand(SEED);
     
     char text[MAX_TEXT_LENGTH + 1];
-    char pat[MAX_PAT_LENGTH + 1];
+    char pat[PAT_LENGTH + 1];
     random_text(MAX_TEXT_LENGTH, text);
-    random_text(MAX_PAT_LENGTH, pat);
+    random_text(PAT_LENGTH, pat);
 
-    for (int textlen = 1; textlen <= MAX_TEXT_LENGTH; textlen++) {
-        for (int patlen = 1; patlen <= MAX_PAT_LENGTH; patlen++) {
-            reset_Ncmp();
-            naive(text, textlen, pat, patlen);
-            cmp_count_data[textlen - 1][patlen - 1] = Ncmp;
+    FILE *gnuplotPipe = popen("gnuplot -persistent", "w");
+    if (gnuplotPipe == NULL) {
+        perror("Gnuplot pipe opening failed");
+        return;
+    }
+    fprintf(gnuplotPipe, "set terminal jpeg\n");
+    fprintf(gnuplotPipe, "set output 'test/graph/test_string_matching.jpeg'\n");
+    fprintf(gnuplotPipe, "set title 'Comparison Counts'\n");
+    fprintf(gnuplotPipe, "set xlabel 'Text Length'\n");
+    fprintf(gnuplotPipe, "set ylabel 'Comparison Count'\n");
+    fprintf(gnuplotPipe, "set key left top\n");
+    fprintf(gnuplotPipe, "plot '-' using 1:2 title 'Naive' with points pointtype 7 linecolor 'red', \\\n");
+    fprintf(gnuplotPipe, "'-' using 1:2 title 'KMP' with points pointtype 7 linecolor 'blue'\n");
+
+    // Naiveのデータを送信
+    for (int textlen = 100; textlen <= MAX_TEXT_LENGTH; textlen += 100) {
+        reset_Ncmp();
+        naive(text, textlen, pat, PAT_LENGTH);
+        fprintf(gnuplotPipe, "%d %d\n", textlen, Ncmp);
+
+        if (textlen % 100 == 0) {
+            printf("naive: textlen = %d, Ncmp = %d\n", textlen, Ncmp);
         }
     }
+    fprintf(gnuplotPipe, "e\n");  // Naiveデータセットの終了
 
-    // 二次元散布図を描画する
-    FILE *gp = popen("gnuplot -persist", "w");
-    fprintf(gp, "set xlabel \"text length\"\n");
-    fprintf(gp, "set ylabel \"pattern length\"\n");
-    fprintf(gp, "set zlabel \"cmp count\"\n");
-    fprintf(gp, "set xrange [1:1000]\n");
-    fprintf(gp, "set yrange [1:100]\n");
-    fprintf(gp, "set dgrid3d 50,50\n");
-    fprintf(gp, "set hidden3d\n");
-    fprintf(gp, "set ticslevel 0\n");
-    fprintf(gp, "set pm3d\n");
-    fprintf(gp, "set palette rgbformulae 33,13,10\n");
-    fprintf(gp, "set terminal jpeg size 1024,512\n");
-    fprintf(gp, "set output \"./test/graph/naive_cmp_count.jpeg\"\n");
-    fprintf(gp, "splot '-' with lines\n");
-    for (int textlen = 1; textlen <= MAX_TEXT_LENGTH; textlen++) {
-        for (int patlen = 1; patlen <= MAX_PAT_LENGTH; patlen++) {
-            fprintf(gp, "%d %d %d\n", textlen, patlen, cmp_count_data[textlen - 1][patlen - 1]);
+    // KMPのデータを送信
+    for (int textlen = 100; textlen <= MAX_TEXT_LENGTH; textlen += 100) {
+        reset_Ncmp();
+        kmp(text, textlen, pat, PAT_LENGTH);
+        fprintf(gnuplotPipe, "%d %d\n", textlen, Ncmp);
+
+        if (textlen % 100 == 0) {
+            printf("kmp: textlen = %d, Ncmp = %d\n", textlen, Ncmp);
         }
-        fprintf(gp, "\n");
     }
-    fprintf(gp, "e\n");
-    fflush(gp);
-    fclose(gp);
+    fprintf(gnuplotPipe, "e\n");  // KMPデータセットの終了
 
+    pclose(gnuplotPipe);
+    fprintf(gnuplotPipe, "e\n");
+    fprintf(gnuplotPipe, "e\n");
+    pclose(gnuplotPipe);
+}
+
+void survey_cmp_count_worst_case() {
+    const int MAX_TEXT_LENGTH = 10000;
+    const int PAT_LENGTH = 30;
+
+    const int SEED = 19;
+    srand(SEED);
+    
+    char text[MAX_TEXT_LENGTH + 1];
+    char pat[PAT_LENGTH + 1];
+    worst_case_text(MAX_TEXT_LENGTH, text);
+    worst_case_text(PAT_LENGTH, pat);
+    pat[PAT_LENGTH - 1] = 'b';
+
+    FILE *gnuplotPipe = popen("gnuplot -persistent", "w");
+    if (gnuplotPipe == NULL) {
+        perror("Gnuplot pipe opening failed");
+        return;
+    }
+    fprintf(gnuplotPipe, "set terminal jpeg\n");
+    fprintf(gnuplotPipe, "set output 'test/graph/test_string_matching_worst_case.jpeg'\n");
+    fprintf(gnuplotPipe, "set title 'Comparison Counts (Worst Case)'\n");
+    fprintf(gnuplotPipe, "set xlabel 'Text Length'\n");
+    fprintf(gnuplotPipe, "set ylabel 'Comparison Count'\n");
+    fprintf(gnuplotPipe, "set key left top\n");
+    fprintf(gnuplotPipe, "plot '-' using 1:2 title 'Naive' with points pointtype 7 linecolor 'red', \\\n");
+    fprintf(gnuplotPipe, "'-' using 1:2 title 'KMP' with points pointtype 7 linecolor 'blue'\n");
+
+    // Naiveのデータを送信
+    for (int textlen = 100; textlen <= MAX_TEXT_LENGTH; textlen += 100) {
+        reset_Ncmp();
+        naive(text, textlen, pat, PAT_LENGTH);
+        fprintf(gnuplotPipe, "%d %d\n", textlen, Ncmp);
+
+        if (textlen % 100 == 0) {
+            printf("naive: textlen = %d, Ncmp = %d\n", textlen, Ncmp);
+        }
+    }
+    fprintf(gnuplotPipe, "e\n");  // Naiveデータセットの終了
+
+    // KMPのデータを送信
+    for (int textlen = 100; textlen <= MAX_TEXT_LENGTH; textlen += 100) {
+        reset_Ncmp();
+        kmp(text, textlen, pat, PAT_LENGTH);
+        fprintf(gnuplotPipe, "%d %d\n", textlen, Ncmp);
+
+        if (textlen % 100 == 0) {
+            printf("kmp: textlen = %d, Ncmp = %d\n", textlen, Ncmp);
+        }
+    }
+    fprintf(gnuplotPipe, "e\n");  // KMPデータセットの終了
+
+    pclose(gnuplotPipe);
 }
