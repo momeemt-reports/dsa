@@ -1,6 +1,7 @@
 #include <CUnit/Basic.h>
 #include <CUnit/CUnit.h>
 #include <CUnit/TestDB.h>
+#include <stdbool.h>
 
 #include "kmp.h"
 
@@ -22,6 +23,9 @@ int main(void) {
     CU_cleanup_registry();
     return ret;
 }
+
+int Ncmp = 0;
+bool isVerbose = false;
 
 void kmp_test_matching() {
     char* text = "This is a pen.";
