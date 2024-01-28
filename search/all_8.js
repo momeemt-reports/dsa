@@ -12,6 +12,7 @@ var searchData=
   ['int_5fto_5fstring_9',['int_to_string',['../primitive__to__string_8h.html#a0bb6a1063d0e9f206da93ad80ab5cbb1',1,'primitive_to_string.h']]],
   ['is_5fempty_5fqueue_10',['is_empty_queue',['../queue_8h.html#a5dc0439e16479ed74bb01c20593c6f01',1,'queue.h']]],
   ['is_5fhead_11',['is_head',['../structcell.html#a695bec7af29df5a513a725a9ea7649f7',1,'cell']]],
-  ['item_5fsize_12',['item_size',['../structQueue.html#aa524a969ac8b16c2993a606dce14afbf',1,'Queue']]],
-  ['itemtostringfunc_13',['ItemToStringFunc',['../queue_8h.html#a8bba5e8db3f03108d14c1fdd5586185d',1,'queue.h']]]
+  ['isverbose_12',['isVerbose',['../cmp_8h.html#af5e4bdbdfea10476200d1682a2e075e5',1,'isVerbose:&#160;cmp.h'],['../naive_8h.html#af5e4bdbdfea10476200d1682a2e075e5',1,'isVerbose:&#160;naive.h']]],
+  ['item_5fsize_13',['item_size',['../structQueue.html#aa524a969ac8b16c2993a606dce14afbf',1,'Queue']]],
+  ['itemtostringfunc_14',['ItemToStringFunc',['../queue_8h.html#a8bba5e8db3f03108d14c1fdd5586185d',1,'queue.h']]]
 ];

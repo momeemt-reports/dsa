@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linked_5flist_2eh_0',['linked_list.h',['../linked__list_8h.html',1,'']]]
+  ['gcd_2eh_0',['gcd.h',['../gcd_8h.html',1,'']]]
 ];

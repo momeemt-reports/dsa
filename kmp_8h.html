@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>dsa: File Members</title>
+<title>dsa: headers/kmp.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -46,7 +46,6 @@ $(function() {
 /* @license-end */
 </script>
 <div id="main-nav"></div>
-</div><!-- top -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -68,20 +67,67 @@ $(function() {
 </div>
 </div>
 
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_7f57b1e41c5acd0e859ae5f3a2b075a9.html">headers</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Functions</a>  </div>
+  <div class="headertitle"><div class="title">kmp.h File Reference</div></div>
+</div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all variables with links to the files they belong to:</div><ul>
-<li>called_fibonacci&#160;:&#160;<a class="el" href="fibonacci_8h.html#a5774b4c2cea21a1089523279b5ae643c">fibonacci.h</a></li>
-<li>compare_count&#160;:&#160;<a class="el" href="sort__collection_8h.html#a8d9148921c1f4f6fb76e4d153ff7d053">sort_collection.h</a></li>
-<li>d&#160;:&#160;<a class="el" href="dijkstra_8h.html#a63daaee678ead4b63cc9a74ec4307c06">dijkstra.h</a></li>
-<li>head&#160;:&#160;<a class="el" href="linked__list_8h.html#a44a1f05f01693276467f8486df44befa">linked_list.h</a></li>
-<li>isVerbose&#160;:&#160;<a class="el" href="cmp_8h.html#af5e4bdbdfea10476200d1682a2e075e5">cmp.h</a>, <a class="el" href="naive_8h.html#af5e4bdbdfea10476200d1682a2e075e5">naive.h</a></li>
-<li>Ncmp&#160;:&#160;<a class="el" href="cmp_8h.html#ab15e58f315697480febdfe2061ebcd29">cmp.h</a>, <a class="el" href="naive_8h.html#ab15e58f315697480febdfe2061ebcd29">naive.h</a></li>
-<li>parent&#160;:&#160;<a class="el" href="dijkstra_8h.html#ae5688cf137ec4a0c2a18d7f6a4caafad">dijkstra.h</a></li>
-<li>S&#160;:&#160;<a class="el" href="dijkstra_8h.html#a7446bc29e046c5b10a0e38a6f400f2ce">dijkstra.h</a></li>
-<li>Scount&#160;:&#160;<a class="el" href="dijkstra_8h.html#a0857194b729f355307dedf565feca940">dijkstra.h</a></li>
-<li>swap_count&#160;:&#160;<a class="el" href="sort__collection_8h.html#aa64355fd4581b09e038e0b5531ea79ef">sort_collection.h</a></li>
-<li>w&#160;:&#160;<a class="el" href="dijkstra_8h.html#a6949b0a7449a7053ebf689d670de1e17">dijkstra.h</a></li>
-</ul>
+<div class="textblock"><code>#include &quot;<a class="el" href="compnext_8h_source.html">compnext.h</a>&quot;</code><br />
+</div>
+<p><a href="kmp_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a6c5e2bbacb65b2109ffde5ee428282d6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="kmp_8h.html#a6c5e2bbacb65b2109ffde5ee428282d6">kmp</a> (char *text, unsigned textlen, char *pat, unsigned patlen)</td></tr>
+<tr class="separator:a6c5e2bbacb65b2109ffde5ee428282d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a6c5e2bbacb65b2109ffde5ee428282d6" name="a6c5e2bbacb65b2109ffde5ee428282d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6c5e2bbacb65b2109ffde5ee428282d6">&#9670;&#160;</a></span>kmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int kmp </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>textlen</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>pat</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">unsigned&#160;</td>
+          <td class="paramname"><em>patlen</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

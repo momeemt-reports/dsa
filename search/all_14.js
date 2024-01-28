@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['w_0',['w',['../dijkstra_8h.html#a6949b0a7449a7053ebf689d670de1e17',1,'dijkstra.h']]]
+  ['value_0',['value',['../structnode.html#a1df258d4663fc36cfd0d5d93588aa21f',1,'node']]]
 ];
